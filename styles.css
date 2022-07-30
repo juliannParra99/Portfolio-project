@@ -10,6 +10,12 @@
   margin: 0;
   padding: 0;
 }
+ /* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 html{
   box-sizing: border-box;
@@ -118,9 +124,46 @@ a{
 
 #projects{
   text-align: center;
-  padding: 10rem 2rem;
+  padding: 11rem 3rem;
   background: var(--main-blue);
+
 }
+
+.projects-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+/*Definiendo contenedores de proyectos*/
+.project {
+  background: var(--main-gray);
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+  border-radius: 2px;
+}
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-tile {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+
+
 
 
 /*contact section*/
@@ -146,4 +189,8 @@ footer{
   padding: 2rem;
   background-color: var(--main-gray);
   border-top: 4px solid var(--main-red);
+}
+
+footer > p {
+  margin: 2rem;
 }
